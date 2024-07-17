@@ -41,7 +41,6 @@ public class Student implements Serializable{
         joinColumns = @JoinColumn(name = "student_id"),
         inverseJoinColumns = @JoinColumn(name = "course_id")
     )
-    @JsonManagedReference
     private List<Course> courses;
 
     public void addCourse(Course course) {
