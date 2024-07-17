@@ -19,7 +19,7 @@ public class ApiApplication {
 	@Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://localhost:5173", "https://react-app-production-89db.up.railway.app/main"));
+        config.setAllowedOrigins(Arrays.asList("http://localhost:5173", "https://react-app-production-89db.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
         config.setAllowCredentials(true);
