@@ -3,7 +3,6 @@ package com.magdiel.api.models;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.List;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -41,7 +40,6 @@ public class Student implements Serializable{
         joinColumns = @JoinColumn(name = "student_id"),
         inverseJoinColumns = @JoinColumn(name = "course_id")
     )
-    @JsonManagedReference
     private List<Course> courses;
 
     public void addCourse(Course course) {
